@@ -1,0 +1,118 @@
+﻿html {
+    box-sizing: border-box;
+    margin: 0;
+    
+}
+body {
+    font-family: 'Bahnschrift','MS Reference Sans Serif';
+    display: flex;
+    padding:32px;
+    font-weight: 300;
+    height:100vh;
+    line-height: 30px;
+    background: linear-gradient(300deg, #d34242, #eedc2e, #53e31a, #1eaed4);
+    justify-content:center;
+
+}
+.wrapper {
+    background-color:white;
+    padding: 32px;
+    width:90vw;
+    border-radius:16px;
+    box-shadow:rgba(0,0,0,0.3) 10px 10px;
+
+}
+.todo-add{
+    display:flex;
+    margin:16px 0px 32px;
+}
+.todo-add input{
+    margin-right:16px;
+    padding:8px 16px;
+    font-size:20px;
+    height: 50px;
+    border-radius:16px;
+    width:90vw;
+}
+.todo-add-button {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    border: 1px solid black;
+    font-size: 45px;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.todo-add-button:hover{
+    background-color:aqua;
+}
+.todo-task{
+    display:flex;
+    align-items:center;
+    min-height:50px;
+    cursor:default;
+    
+}
+.todo-task_complete .todo-task-name{
+    text-decoration:line-through;
+    color:grey;
+}
+.todo-checkbox input {
+    display: none;
+}
+.todo-checkbox input:checked + div{
+    background-color:aqua;
+}
+.todo-checkbox input:checked + div::after{
+    display:block;
+    content:'\2713';
+    color:black;
+    font-size:25px;
+    font-weight:300;
+    margin:0px 0px 0px 4px;
+    
+}
+.todo-checkbox div{
+    cursor: pointer;
+    height:25px;
+    width:25px;
+    border:1px solid black;
+    border-radius:5px;
+    position:relative;
+    color:white;
+    margin-right:30px;
+}
+.todo-checkbox div::after{
+
+    text-align:center;
+    position:absolute;
+    margin:5px 5px 0px 5px;
+}
+.todo-task-name {
+    font-size: 20px;
+    font-weight:400;
+}
+.todo-task-delete{
+    margin-left:auto;
+    margin-right:0;
+
+}
+.todo-task-delete:hover{
+    background-color:red;
+}
+.todo-task:hover .todo-task-delete{
+    display:block;
+}
+.todo-task-delete {
+    border: 1px solid black;
+    font-size: 26px;
+    text-align: center;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    display:none;
+    cursor:pointer;
+}
